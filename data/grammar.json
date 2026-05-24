@@ -1,0 +1,127 @@
+[
+  {
+    "sentence": "She ___ to the library every Saturday afternoon.",
+    "missingWord": "goes",
+    "options": ["goes", "went", "gone", "going"]
+  },
+  {
+    "sentence": "If it ___ heavily tomorrow, we will cancel our journey.",
+    "missingWord": "rains",
+    "options": ["rain", "rains", "rained", "raining"]
+  },
+  {
+    "sentence": "They have already ___ their science challenge.",
+    "missingWord": "finished",
+    "options": ["finished", "finish", "finishing", "finishes"]
+  },
+  {
+    "sentence": "The brave volunteer ___ ready to face the future.",
+    "missingWord": "is",
+    "options": ["are", "is", "was", "were"]
+  },
+  {
+    "sentence": "I will call you immediately ___ I arrive at the mountain.",
+    "missingWord": "when",
+    "options": ["when", "while", "as", "if"]
+  },
+  {
+    "sentence": "The girl ___ won the English contest is my classmate.",
+    "missingWord": "who",
+    "options": ["who", "whom", "which", "whose"]
+  },
+  {
+    "sentence": "The historic monument ___ we visited yesterday was breathtaking.",
+    "missingWord": "which",
+    "options": ["which", "who", "whom", "whose"]
+  },
+  {
+    "sentence": "I wish I ___ an astronaut so I could explore the universe.",
+    "missingWord": "were",
+    "options": ["were", "am", "will be", "would be"]
+  },
+  {
+    "sentence": "If I ___ you, I would take that career opportunity.",
+    "missingWord": "were",
+    "options": ["were", "am", "was", "been"]
+  },
+  {
+    "sentence": "This ancient heritage site ___ by thousands of tourists every year.",
+    "missingWord": "is visited",
+    "options": ["is visited", "visiting", "visits", "visited"]
+  },
+  {
+    "sentence": "Our teacher suggested ___ trees to protect the local environment.",
+    "missingWord": "planting",
+    "options": ["planting", "to plant", "plant", "planted"]
+  },
+  {
+    "sentence": "He asked me if I ___ bilingual in English and Vietnamese.",
+    "missingWord": "was",
+    "options": ["was", "am", "were", "been"]
+  },
+  {
+    "sentence": "English is spoken ___ a native language in Australia.",
+    "missingWord": "as",
+    "options": ["as", "like", "for", "with"]
+  },
+  {
+    "sentence": "The satellite was launched ___ space last night.",
+    "missingWord": "into",
+    "options": ["into", "on", "to", "at"]
+  },
+  {
+    "sentence": "He spent three hours ___ about spacecraft and orbits on the telescope.",
+    "missingWord": "reading",
+    "options": ["reading", "to read", "read", "reads"]
+  },
+  {
+    "sentence": "If the earthquake occurs, we ___ evacuate immediately.",
+    "missingWord": "must",
+    "options": ["must", "would", "shall", "ought"]
+  },
+  {
+    "sentence": "Life in the city is ___ busier than in the countryside.",
+    "missingWord": "much",
+    "options": ["much", "more", "most", "many"]
+  },
+  {
+    "sentence": "By the time we arrived at the destination, the tour ___ already started.",
+    "missingWord": "had",
+    "options": ["had", "has", "have", "was"]
+  },
+  {
+    "sentence": "The archeologist, ___ discovery made headlines, is very famous.",
+    "missingWord": "whose",
+    "options": ["whose", "who", "whom", "which"]
+  },
+  {
+    "sentence": "He is very optimistic ___ the development of the community.",
+    "missingWord": "about",
+    "options": ["about", "on", "for", "with"]
+  },
+  {
+    "sentence": "Students are looking forward to ___ wonders of Viet Nam.",
+    "missingWord": "exploring",
+    "options": ["exploring", "explore", "to explore", "explored"]
+  },
+  {
+    "sentence": "The volcano ___ erupted yesterday caused a major catastrophe.",
+    "missingWord": "that",
+    "options": ["that", "who", "whom", "whose"]
+  },
+  {
+    "sentence": "She has worked as an apprentice ___ six months.",
+    "missingWord": "for",
+    "options": ["for", "since", "during", "at"]
+  },
+  {
+    "sentence": "I wish you ___ make so much noise while I am listening.",
+    "missingWord": "wouldn't",
+    "options": ["wouldn't", "don't", "won't", "haven't"]
+  },
+  {
+    "sentence": "He was determined ___ his qualifications to get a better profession.",
+    "missingWord": "to improve",
+    "options": ["to improve", "improving", "improve", "improved"]
+  }
+]
