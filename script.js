@@ -216,12 +216,16 @@ function playLevelUpSound() {
 // -------------------------------------------------------------
 // 4. TEXT TO SPEECH (TTS) SYSTEM
 // -------------------------------------------------------------
-function speakText(text) {
+function speakText(text, lang = 'en-US') {
   if ('speechSynthesis' in window) {
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-US';
+    utterance.lang = lang;
     utterance.rate = 0.9;
+    // Choose a voice that matches the language if available
+    const voices = speechSynthesis.getVoices();
+    const voice = voices.find(v => v.lang.startsWith(lang));
+    if (voice) utterance.voice = voice;
     window.speechSynthesis.speak(utterance);
   } else {
     console.warn("Speech Synthesis không hỗ trợ.");
@@ -664,7 +668,28 @@ function renderQuestion() {
     wordCard.style.fontWeight = 'bold';
     wordCard.style.boxShadow = '0 6px 15px rgba(46,204,113,0.3)';
     wordCard.innerHTML = `<span>${currentItem.word}</span>`;
-    
+
+    // IPA display element
+    const ipaDiv = document.createElement('div');
+    ipaDiv.style.fontSize = '1rem';
+    ipaDiv.style.marginTop = '0.4rem';
+    ipaDiv.style.color = 'var(--color-text-light)';
+    ipaDiv.textContent = 'IPA: loading...';
+
+    // Fetch IPA from dictionary API
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${currentItem.word}`)
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data) && data[0].phonetics) {
+          const phon = data[0].phonetics.find(p => p.text);
+          if (phon) ipaDiv.textContent = `IPA: ${phon.text}`;
+          else ipaDiv.textContent = 'IPA: N/A';
+        } else {
+          ipaDiv.textContent = 'IPA: N/A';
+        }
+      })
+      .catch(() => { ipaDiv.textContent = 'IPA: N/A'; });
+   wordCard.appendChild(ipaDiv);
     const audioBtn = document.createElement('button');
     audioBtn.style.background = 'rgba(255,255,255,0.2)';
     audioBtn.style.border = 'none';
@@ -685,6 +710,9 @@ function renderQuestion() {
     
     wordCard.appendChild(audioBtn);
     questionBox.appendChild(wordCard);
+    // Auto-play pronunciation: British then American
+    speakText(currentItem.word, 'en-GB');
+    setTimeout(() => speakText(currentItem.word, 'en-US'), 800);
     screen.appendChild(questionBox);
     
     const layout = document.createElement('div');
