@@ -502,10 +502,9 @@ function renderQuestion() {
   backBtn.innerHTML = '🔙';
   backBtn.title = 'Trở về trang chủ';
   backBtn.addEventListener('click', () => {
-    if (confirm("Bạn muốn hủy lượt chơi này và quay về trang chủ?")) {
-      playTone(300, 'sine', 0.08, 0.08);
-      renderDashboard();
-    }
+    // Directly navigate back without confirmation
+    playTone(300, 'sine', 0.08, 0.08);
+    renderDashboard();
   });
   gameHeader.appendChild(backBtn);
   
@@ -710,9 +709,8 @@ function renderQuestion() {
     
     wordCard.appendChild(audioBtn);
     questionBox.appendChild(wordCard);
-    // Auto-play pronunciation: British then American
-    speakText(currentItem.word, 'en-GB');
-    setTimeout(() => speakText(currentItem.word, 'en-US'), 800);
+    // Auto-play pronunciation: American only
+speakText(currentItem.word, 'en-US');
     screen.appendChild(questionBox);
     
     const layout = document.createElement('div');
